@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Apple
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: castle
+    uniqueID: 3437569995
+    locked: 0
+  - name: forest
+    uniqueID: 1833823261
+    locked: 0
+  - name: fountain
+    uniqueID: 2276702407
+    locked: 0
+  - name: background
+    uniqueID: 2368853495
+    locked: 0
+  - name: flowers
+    uniqueID: 3249222659
+    locked: 0
+  - name: zhuzi
+    uniqueID: 518616633
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: terrian
+    uniqueID: 3122535121
+    locked: 0
