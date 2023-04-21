@@ -57,6 +57,9 @@ TagManager:
   - name: zhuzi
     uniqueID: 518616633
     locked: 0
+  - name: sprikes
+    uniqueID: 701651113
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
