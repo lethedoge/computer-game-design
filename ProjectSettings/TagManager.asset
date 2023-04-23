@@ -39,7 +39,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: castle
+  - name: background
     uniqueID: 3437569995
     locked: 0
   - name: forest
@@ -48,7 +48,7 @@ TagManager:
   - name: fountain
     uniqueID: 2276702407
     locked: 0
-  - name: background
+  - name: 1
     uniqueID: 2368853495
     locked: 0
   - name: flowers
@@ -65,4 +65,10 @@ TagManager:
     locked: 0
   - name: terrian
     uniqueID: 3122535121
+    locked: 0
+  - name: mask
+    uniqueID: 1553445247
+    locked: 0
+  - name: vine
+    uniqueID: 4010966763
     locked: 0
