@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class startmenu : MonoBehaviour
 {
     public void selectingmenu()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
-// Start is called before the first frame update
-     
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    // Start is called before the first frame update
+
+}
 
 

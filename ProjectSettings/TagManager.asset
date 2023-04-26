@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Apple
+  - Music
+  - startingmenu
+  - lvl
   layers:
   - Default
   - TransparentFX
