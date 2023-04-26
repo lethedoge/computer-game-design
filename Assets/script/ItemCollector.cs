@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //using TMPro;
 
 public class ItemCollector : MonoBehaviour
@@ -12,6 +13,7 @@ public class ItemCollector : MonoBehaviour
     public bool hasAllObjects = false;
     public bool appearKey = false;
     public bool hasKey = false;
+    public string scene;
 
     // Start is called before the first frame update
     private void Start()
@@ -31,7 +33,7 @@ public class ItemCollector : MonoBehaviour
         {
             numObjects++;
             Destroy(other.gameObject);
-            if (numObjects >= 1)
+            if (numObjects >= 3)
             {
                 hasAllObjects = true;
             }
@@ -52,14 +54,13 @@ public class ItemCollector : MonoBehaviour
             // Level complete!
         }
     }
+
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.tag == "Door" && hasKey && Input.GetKeyDown(KeyCode.E))
+        if(other.tag == "Door" && hasKey && Input.GetButtonDown("Scene"))
         {
-            Debug.Log("hello?");
-            Application.Quit();
+            Debug.Log("door");
+            SceneManager.LoadScene(scene);
         }
     }
-
-
 }

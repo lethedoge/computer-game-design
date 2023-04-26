@@ -65111,7 +65111,6 @@ GameObject:
   - component: {fileID: 1836183303}
   - component: {fileID: 1836183302}
   - component: {fileID: 1836183304}
-  - component: {fileID: 1836183305}
   - component: {fileID: 1836183306}
   m_Layer: 0
   m_Name: Key
@@ -65213,19 +65212,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &1836183305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836183299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dae4ef24f4329e4994b75538ff15a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 1905975630}
 --- !u!95 &1836183306
 Animator:
   serializedVersion: 5
