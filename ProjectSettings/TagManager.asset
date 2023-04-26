@@ -8,6 +8,9 @@ TagManager:
   - Mirror
   - Princess
   - Frog
+  - Key
+  - Witch
+  - Door
   layers:
   - Default
   - TransparentFX

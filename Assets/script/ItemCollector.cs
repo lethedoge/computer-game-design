@@ -1,14 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using TMPro;
 
 public class ItemCollector : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    //public TextMeshProUGUI myText;
+    public GameObject key, dialogue;
+
+    public int numObjects = 0;
+    public bool hasAllObjects = false;
+    public bool appearKey = false;
+    public bool hasKey = false;
+
+    // Start is called before the first frame update
+    private void Start()
     {
-        if(collision.gameObject.CompareTag("Apple"))
+        key.SetActive(false);
+        dialogue.SetActive(false);
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Apple")
         {
-            Destroy(collision.gameObject);
+            numObjects++;
+            Destroy(other.gameObject);
+            if (numObjects >= 1)
+            {
+                hasAllObjects = true;
+            }
+        }
+        else if (other.tag == "Witch" && hasAllObjects)
+        {
+            appearKey = true;
+            //myText.text = "Hi";
+            Destroy(other.gameObject);
+            dialogue.SetActive(true);
+            key.SetActive(true);
+        }
+
+        else if (other.tag == "Key" && appearKey)
+        {
+            Destroy(other.gameObject);
+            hasKey = true;
+            // Level complete!
         }
     }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag == "Door" && hasKey && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("hello?");
+            Application.Quit();
+        }
+    }
+
+
 }
