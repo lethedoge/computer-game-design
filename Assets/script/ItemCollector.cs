@@ -53,13 +53,8 @@ public class ItemCollector : MonoBehaviour
             hasKey = true;
             // Level complete!
         }
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.tag == "Door" && hasKey && Input.GetButtonDown("Scene"))
+        if (other.tag == "Door" && hasKey)
         {
-            Debug.Log("door");
             SceneManager.LoadScene(scene);
         }
     }
