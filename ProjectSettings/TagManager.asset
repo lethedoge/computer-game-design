@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Apple
-  - Music
-  - startingmenu
-  - lvl
+  - Mirror
+  - Princess
+  - Frog
+  - Key
+  - Witch
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -43,9 +46,6 @@ TagManager:
   - 
   m_SortingLayers:
   - name: background
-    uniqueID: 1854536871
-    locked: 0
-  - name: castle
     uniqueID: 3437569995
     locked: 0
   - name: forest
@@ -54,7 +54,7 @@ TagManager:
   - name: fountain
     uniqueID: 2276702407
     locked: 0
-  - name: background
+  - name: 1
     uniqueID: 2368853495
     locked: 0
   - name: flowers
@@ -72,9 +72,9 @@ TagManager:
   - name: terrian
     uniqueID: 3122535121
     locked: 0
-  - name: Title
-    uniqueID: 1429176257
+  - name: mask
+    uniqueID: 1553445247
     locked: 0
-  - name: UI
-    uniqueID: 3130829989
-    locked: 1
+  - name: vine
+    uniqueID: 4010966763
+    locked: 0
