@@ -6,39 +6,31 @@ using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
     public GameObject dialogueBox;
-    public Text dialougeText;
-    public string npcText;
-
-    private bool playerNpc;
-
 
     void Start()
     {
-        
+
     }
 
-    
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Frog") ||collision.gameObject.CompareTag("Princess"))
         {
             dialogueBox.SetActive(true);
-            playerNpc = true;
             Debug.Log("1");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Frog") ||collision.gameObject.CompareTag("Princess"))
         {
             dialogueBox.SetActive(false);
-            playerNpc = false;
             Debug.Log("2");
         }
     }
-    
+
 }
