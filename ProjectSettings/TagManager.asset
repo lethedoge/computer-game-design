@@ -11,11 +11,14 @@ TagManager:
   - Key
   - Witch
   - Door
+  - startingmenu
+  - Music
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hiddendoor
   - Water
   - UI
   - Ground
@@ -50,6 +53,9 @@ TagManager:
     locked: 0
   - name: forest
     uniqueID: 1833823261
+    locked: 0
+  - name: levelmap
+    uniqueID: 3387269607
     locked: 0
   - name: fountain
     uniqueID: 2276702407
