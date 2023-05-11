@@ -2,52 +2,143 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour 
+public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private SpriteRenderer sprite;
-    private Animator anim;
+    public GameObject frog, princess;
+    private Rigidbody2D frogPlayer, princessPlayer;
+    private SpriteRenderer frogSprite, princessSprite;
+    private Animator frogAnim, princessAnim;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
 
-    private float dirx = 0f;
+    public float speed = 5f;
+    public float jumpSpeed = 7f;
+    private float direction = 0f;
+    public float groundCheckRadius;
+    private bool isTouchingGround;
+    public int isPlayerNearby = 0;
+    int whichAvatarIsOn = 1;
+
+    public float duration = 7.0f;
+    private float currentTime;
 
     // Start is called before the first frame update
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        frogPlayer = frog.GetComponent<Rigidbody2D>();
+        princessPlayer = princess.GetComponent<Rigidbody2D>();
+        frogSprite = frog.GetComponent<SpriteRenderer>();
+        princessSprite = princess.GetComponent<SpriteRenderer>();
+        frogAnim = frog.GetComponent<Animator>();
+        princessAnim = princess.GetComponent<Animator>();
+
+        frog.gameObject.SetActive(true);
+        princess.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     private void Update()
     {
-        dirx = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirx * 5f, rb.velocity.y);
-
-        if(Input.GetButtonDown("Jump"))
+        if (whichAvatarIsOn == 1)
         {
-            rb.velocity = new Vector2(rb.velocity.x,7f);
-        }
+            isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+            direction = Input.GetAxis("Horizontal");
+            if (direction > 0f)
+            {
+                frogPlayer.velocity = new Vector2(direction * speed, frogPlayer.velocity.y);
+                frogSprite.flipX = true;
 
-        UpdateAnimationUpdate();
+            }
+            else if (direction < 0f)
+            {
+                frogPlayer.velocity = new Vector2(direction * speed, frogPlayer.velocity.y);
+                frogSprite.flipX = false;
+
+            }
+            else
+            {
+                frogPlayer.velocity = new Vector2(0, frogPlayer.velocity.y);
+            }
+
+            if (Input.GetButtonDown("Jump") && isTouchingGround)
+            {
+                frogPlayer.velocity = new Vector2(frogPlayer.velocity.x, jumpSpeed);
+            }
+
+            princessPlayer.transform.position = frogPlayer.position;
+
+            frogAnim.SetBool("OnGround", isTouchingGround);
+            frogAnim.SetFloat("Speed", Mathf.Abs(frogPlayer.velocity.x));
+            isPlayerNearby = FindObjectOfType<Transformation>().IsPlayerNearby();
+
+        }
+        else if (whichAvatarIsOn == 2)
+        {
+            direction = Input.GetAxis("Horizontal");
+            if (direction > 0f)
+            {
+                princessPlayer.velocity = new Vector2(direction * speed, princessPlayer.velocity.y);
+                princessSprite.flipX = false;
+
+            }
+            else if (direction < 0f)
+            {
+                princessPlayer.velocity = new Vector2(direction * speed, princessPlayer.velocity.y);
+                princessSprite.flipX = true;
+
+            }
+            else
+            {
+                princessPlayer.velocity = new Vector2(0, princessPlayer.velocity.y);
+            }
+            frogPlayer.transform.position = princessPlayer.position;
+            princessAnim.SetFloat("Speed", Mathf.Abs(princessPlayer.velocity.x));
+            isPlayerNearby = FindObjectOfType<Princesstransform>().IsPlayerNearby();
+
+            Debug.Log(currentTime);
+            currentTime -= Time.deltaTime;
+            if(currentTime <= 0) 
+            {
+                TransformBack();
+            }
+
+
+        }
+        if (Input.GetButtonDown("Transform") && isPlayerNearby == 1)
+        {
+            // processing whichAvatarIsOn variable
+            switch (whichAvatarIsOn)
+            {
+
+                // if the first avatar is on
+                case 1:
+
+                    // then the second avatar is on now
+                    whichAvatarIsOn = 2;
+
+                    // disable the first one and anable the second one
+                    frog.gameObject.SetActive(false);
+                    princess.gameObject.SetActive(true);
+                    currentTime = duration;
+                    break;
+
+                // if the second avatar is on
+                case 2:
+
+                    // then the first avatar is on now
+                    whichAvatarIsOn = 1;
+
+                    // disable the second one and anable the first one
+                    frog.gameObject.SetActive(true);
+                    princess.gameObject.SetActive(false);
+                    break;
+            }
+        }
     }
-
-    private void UpdateAnimationUpdate()
+    void TransformBack()
     {
-        if (dirx > 0f)
-        {
-            anim.SetBool("runing", true);
-            sprite.flipX = true;
-        }
-        else if (dirx < 0f)
-        {
-            anim.SetBool("runing", true);
-            sprite.flipX = false;
-        }
-        else
-        {
-            anim.SetBool("runing", false);
-        }
-            
+        whichAvatarIsOn = 1;
+        frog.gameObject.SetActive(true);
+        princess.gameObject.SetActive(false);
     }
 }
