@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cofused about getting down?
+  m_text: 'Confused about getting down?
 
     Jump into the pipe!
 
@@ -2830,7 +2830,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -8, z: 0}
+  - first: {x: -3, y: -7, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -2840,31 +2840,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -8, z: 0}
+  - first: {x: -2, y: -7, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 44
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 41
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2976,10 +2956,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: cbe0f79b044013b419e5be761cc81611, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: c5ef806209d7d0842b37b6513a39dbed, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: b6f2108af06db9e4faf3969105633467, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 32d9e4f6fe2e00544ab9173e121b585e, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: b6958c3af98c68847a836e2ccc294f0d, type: 2}
   - m_RefCount: 4
@@ -3195,14 +3175,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1653579084, guid: 7e3e19129d8ebf749a37f0f36b19b7b0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 11
     m_Data: {fileID: -896314710, guid: 7e3e19129d8ebf749a37f0f36b19b7b0, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: 767238522, guid: 7e3e19129d8ebf749a37f0f36b19b7b0, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2023308723, guid: 7e3e19129d8ebf749a37f0f36b19b7b0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 961808798, guid: 7e3e19129d8ebf749a37f0f36b19b7b0, type: 3}
   - m_RefCount: 1
@@ -3254,7 +3234,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1105233407, guid: 7e3e19129d8ebf749a37f0f36b19b7b0, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 193
+  - m_RefCount: 191
     m_Data:
       e00: 1
       e01: 0
@@ -3273,7 +3253,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 193
+  - m_RefCount: 191
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -3506,6 +3486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418346047}
   - component: {fileID: 418346046}
+  - component: {fileID: 418346048}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -3624,6 +3605,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &418346048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418346045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea6dd86df4d46c4b8381f1e8d7aab6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436512510
 GameObject:
   m_ObjectHideFlags: 0
