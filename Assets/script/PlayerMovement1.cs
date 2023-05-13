@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using TMPro;
 
 public class PlayerMovement1 : MonoBehaviour
 {
-    public GameObject frog, princess;
+    public GameObject frog, princess, textTimer;
     private Rigidbody2D frogPlayer, princessPlayer;
     private SpriteRenderer frogSprite, princessSprite;
     private Animator frogAnim, princessAnim;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public TextMeshProUGUI collectionText;
 
     public float speed = 5f;
     public float jumpSpeed = 7f;
@@ -125,9 +128,12 @@ public class PlayerMovement1 : MonoBehaviour
 
             Debug.Log(currentTime);
             currentTime -= Time.deltaTime;
+            textTimer.SetActive(true);
+            collectionText.text = (Math.Round(currentTime,1)).ToString();
             if (currentTime <= 0)
             {
                 TransformBack();
+                textTimer.SetActive(false);
             }
 
 
@@ -159,6 +165,7 @@ public class PlayerMovement1 : MonoBehaviour
                     // disable the second one and anable the first one
                     frog.gameObject.SetActive(true);
                     princess.gameObject.SetActive(false);
+                    textTimer.SetActive(false);
                     break;
             }
         }

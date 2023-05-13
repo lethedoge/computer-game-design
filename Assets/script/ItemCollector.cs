@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using TMPro;
+using TMPro;
 
 public class ItemCollector : MonoBehaviour
 {
     //public TextMeshProUGUI myText;
     public GameObject key, dialogue;
+    public TextMeshProUGUI collectionText;
 
     public int numObjects = 0;
     public bool hasAllObjects = false;
@@ -33,6 +34,7 @@ public class ItemCollector : MonoBehaviour
         {
             numObjects++;
             Destroy(other.gameObject);
+            collectionText.text = ":" + numObjects.ToString();
             if (numObjects >= 3)
             {
                 hasAllObjects = true;
