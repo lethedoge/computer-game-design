@@ -11,6 +11,7 @@ TagManager:
   - Key
   - Witch
   - Door
+  - Breaking
   layers:
   - Default
   - TransparentFX
