@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: acbeffff1ebfffffd0edffff84eeffffb4eeffff58efffffb6f2fffffef4ffff387d0000f67e000076870000f8b10000
+      m_SelectedIDs: c2e20000
+      m_LastClickedID: 58050
+      m_ExpandedIDs: 76acfffff8acffff34b0ffff40b3ffffbab3ffff2eb4ffff5eb7ffffcab9ffffacbeffff1ebfffffd0edffff84eeffffb4eeffff58efffffb6f2fffffef4ffff387d0000f67e000076870000f8b1000016c300004cc30000b4cf000072d10000e4d80000d4d900007ae40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 324.24704, y: 324.98328, z: -1.2643306}
+    m_Target: {x: 421.79965, y: -26.889797, z: -4.8217154}
     speed: 2
-    m_Value: {x: 324.24704, y: 324.98328, z: -1.2643306}
+    m_Value: {x: 421.79965, y: -26.889797, z: -4.8217154}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 329.17255
+    m_Target: 695.09906
     speed: 2
-    m_Value: 329.17255
+    m_Value: 695.09906
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
+    scrollPos: {x: 0, y: 164.33337}
     m_SelectedIDs: 6a7b0000
     m_LastClickedID: 31594
     m_ExpandedIDs: 00000000447b000000ca9a3b
@@ -775,8 +775,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: c2e20000
+    m_LastClickedInstanceID: 58050
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003a61000096600000ae60000000000000a86d0000c26d0000866100002a6e00005a620000e4610000b06d00003c68000038680000
     m_RenameOverlay:
@@ -836,7 +836,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -4428
+  m_LastSelectedObjectID: 55764
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
